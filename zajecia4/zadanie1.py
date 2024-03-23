@@ -11,5 +11,27 @@
 # po każdej iteracji (przejściu po wszystkich elementach z listy) największa liczba powinna znaleźć się na początku/końcu (wypłynąć niczym bąbelek)
 # algorytm powinien przerwać działanie jeśli ostatnia iteracja nie zamieniła miejscami żadnych elementów
 
-lista = [8,3,7,5,1]
 
+
+def sortowanie_malejaco():
+    lista = [8, 3, 7, 5, 1]
+    for i in range(len(lista)):
+        for j in range(i+1,len(lista)):
+            if lista[j] > lista[i]:
+                lista[i], lista[j] = lista[j], lista[i]
+    return lista
+
+posortowana_malejaco_lista = sortowanie_malejaco()
+print(posortowana_malejaco_lista)
+
+def sortowanie_rosnaco():
+    lista = [8, 3, 7, 5, 1]
+    for i in range(len(lista)):
+        for j in range(i+1,len(lista)):
+            if lista[j] < lista[i]:
+                lista[i], lista[j] = lista[j], lista[i]
+    return lista
+
+
+posortowana_rosnaco_lista = sortowanie_rosnaco()
+print(posortowana_rosnaco_lista)
